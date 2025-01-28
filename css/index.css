@@ -1,0 +1,174 @@
+
+/*General styles*/
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    position: fixed;
+    height: 1%;
+    width: 100%;
+    padding: 1%; 
+    bottom: 0;
+    background-color: black;
+    text-align: left;
+    color: white;
+}
+
+.title {
+    position: fixed;
+    display: flex;
+    height: 12%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    padding-top: 2%;
+    gap: 10%;
+    background-color: black;
+    font-family: Courier, monospace;
+    font-size: large;
+    color: white;
+}
+
+.title h1, .title h2 {
+    margin: 0; 
+}
+
+.main {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.backgroundVideo {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 12%;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content {
+    position: absolute;
+    display:flex;
+    height: 83%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    top: 12%;
+    text-align: center;
+    padding: 2%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.me {
+    height: 80%;
+    width: 45%;
+}
+
+.me img {
+    height: 85%;
+    width: 80%;
+    margin-top: 5%;
+    border-radius: 50%;
+}
+
+.info {
+    display: flex;
+    height: 100%;
+    width: 45%;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1%;
+    gap: 5%;
+}
+
+.info button {
+    height: 35%;
+    width: 35%;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color:white;
+}
+
+.info button:hover {
+    background-color: darkblue;
+}
+
+/*Styles for mobile devices*/
+@media(max-width: 600px){
+
+    footer {
+        height: 3%;
+    }
+
+    .title {
+        height: 20%;
+        text-align: center;
+    }
+
+    .me {
+        height: 40%;
+        width: 80%;
+        margin-top: 45%;
+    }
+
+
+    .me img {
+        height: 70%;
+        width: 70%;
+    }
+
+    .info {
+        height: 40%;
+        width: 80%;
+        gap: 10%;
+    }
+
+    .info button {
+        height: 15%;
+        width: 50%;
+    }
+
+}
+
+/*Styles for tablets*/
+@media(min-width: 601px) and (max-width: 1600px){
+
+    .content {
+        gap: 5%;
+    }
+
+    .info {
+        top: 90%;
+        gap: 10%;
+    }
+
+    .info button {
+        height: 40%;
+        width: 60%;
+    }
+
+}

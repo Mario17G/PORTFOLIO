@@ -1,0 +1,298 @@
+
+/*General styles*/
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: rgb(17, 17, 17);
+}
+
+footer {
+    position: fixed;
+    height: 1%;
+    width: 100%;
+    background-color: black;
+    padding: 1%; 
+    bottom: 0;
+    text-align: left;
+    color: white;
+}
+
+h2 {
+    font-family: Georgia, Times, serif;
+    font-size: x-large;
+    color: white;
+    margin-bottom: 0;
+}
+
+hr {
+    height: 1%;
+    width: 90%;
+    border: none;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.8), 
+        rgba(255, 255, 255, 1),   
+        rgba(255, 255, 255, 0.8)
+    );
+    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.5);  
+    margin-left: 5%; 
+    border-radius: 1%;
+}
+
+.title {
+    position: fixed;
+    display: flex;
+    height: 10%;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    top: 0;
+    padding: 0;
+    font-family: Courier, monospace;
+    font-size: xx-large;
+    color: white;
+}
+
+.title h1 {
+    margin-left: 2%; 
+}
+
+.title a {
+    height: 100%; 
+    display: flex;
+    align-items: center; 
+    margin-left: auto; 
+    margin-right: 4%;  
+}
+
+.title img {
+    height: 70%; 
+    width: 100%;
+}
+
+.buttons {
+    position: fixed;
+    display: flex;
+    height: 4%;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    top: 10%;
+}
+
+.buttons button{
+    height: 100%;
+    width: 33.3%;
+    cursor: pointer;
+    border: 1% solid white;
+    box-shadow: 1% 1% white;
+    background-color: rgb(17, 17, 17);
+    font-family: Georgia, Times, serif;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+}
+
+.buttons button:active{
+    box-shadow: none;
+    transform: translate(1%, 1%);
+    background-color: rgb(151, 144, 144);
+}
+
+.buttons button.selected {
+    box-shadow: none;
+    transform: translate(1%, 1%);
+    background-color: rgb(151, 144, 144);
+}
+
+.main {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    top: 14%;
+}
+
+.container {
+    position: absolute;
+    height: 70%;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    top: 5%;
+    border-radius: 2%;
+    background-color: rgb(28, 27, 27);
+}
+
+/*About me section*/
+
+.image {
+    position: absolute;
+    display: flex;
+    height: 80%;
+    width: 50%;
+    align-items: center;
+    top: 15%;
+    left: 5%;
+}
+
+.image img {
+    height: 100%;
+    width: 60%;
+    border-radius: 5%;
+}
+
+.info {
+    position: absolute;
+    display: flex;
+    height: 80%;
+    width: 50%;
+    top: 13%;
+    left: 37%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: white;
+}
+
+/*Experience section*/
+
+.imgJobIPN {
+    position: absolute;
+    display: flex;
+    height: 50%;
+    width: 50%;
+    align-items: center;
+    top: 8%;
+    left: 1%;
+}
+
+.imgJobIPN img{
+    height: 70%;
+    width: 50%;
+}
+
+.infoJobIPN {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 18%;
+    left: 30%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: white;
+}
+
+.imgJobGTAC {
+    position: absolute;
+    display: flex;
+    height: 40%;
+    width: 50%;
+    align-items: center;
+    top: 60%;
+    left: 5%;
+}
+
+.imgJobGTAC img{
+    height: 60%;
+    width: 30%;
+    border-radius: 2%;
+}
+
+.infoJobGTAC {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 67%;
+    left: 30%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: white;
+}
+
+/*Technologies section*/
+
+.itemsContainer {
+    position: absolute;
+    display: flex;
+    height: 85%;
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    top: 12%;
+    left: 5%;
+    padding-top: 3%;
+    gap: 5%;
+}
+
+.tec {
+    display: flex;
+    height: 30%;
+    width: 20%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tec img {
+    height: 50%;
+    width: 50%;
+}
+
+.tec h3 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: white;
+}
+
+/*Styles for mobile devices*/
+@media(max-width: 600px){
+
+    footer {
+        height: 3%;
+    }
+
+    h2 {
+        font-size: large;
+    }
+
+    h3 {
+        font-size: medium;
+    }
+
+    .title {
+        font-size: large;
+    }
+
+    .image {
+        height: 100%;
+        width: 100%;
+        top: 28%;
+    }
+
+    .image img {
+        height: 40%;
+        width: 90%;
+    }
+    
+    .info {
+       width: 90%;
+       margin-top: 0;
+       left: 6%;
+       font-size: small;
+    }
+
+    .tec h3 {
+        font-size: small;
+    }
+
+}
